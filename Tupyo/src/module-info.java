@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author kopo
+ *
+ */
+module Tupyo {
+}
