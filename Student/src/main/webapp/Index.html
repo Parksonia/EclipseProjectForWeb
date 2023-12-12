@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="java.sql.*, javax.sql.*, java.io.*"%>
+<%@ page import="kr.ac.kopo.ctc.kopo15.dao.*"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title></title>
+</head>
+
+<body>
+
+<%
+StudentItemDao studentItemDao = new StudentItemDaoMock();
+
+StudentItemService studentItemService = new StudentItemServiceTest();
+studentItemService.setStudentItemDao(studentItemDao);
+
+	Pagination pagination = studentItemService.getPagination(1, 50);
+%>
+
+kopo15123
+<%=pagination.getC()%>
+
+</body>
+
+
+</html>
